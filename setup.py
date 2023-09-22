@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='datanest',
-    version='0.0.1',
+    version='0.0.2',
     description='A group of Datasets for you project',
     author='Ethan Barr',
     author_email='ethanwbarr07@gmail.com',
