@@ -83,9 +83,3 @@ class Datasets:
                 data.append(line)
     
         return data
-    
-# Testing 
-print('.')
-
-datasets = Datasets('download')
-datasets.download_dataset('TonyStark.txt')
