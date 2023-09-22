@@ -9,6 +9,6 @@ setup(
     url='https://github.com/Ethan-Barr/Datanest',
     packages=find_packages(),
     install_requires=[
-        # Add dependencies
+    "Requests==2.28.2"
     ],
 )
