@@ -23,18 +23,23 @@ class Datasets:
             if response.status_code == 200:
                 with open(save_path, 'wb') as file:
                     file.write(response.content)
+
+                print("Downloaded dataset")
                 return "Downloaded dataset"
+            
             else:
+                print("Failed to download dataset")
                 return "Failed to download dataset"
+            
         except Exception as e:
+            print(f'Error: {e}')
             return f"Error: {e}"
 
     
     def download_dataset(self, model):
-        output_dir = self.path
-        url = f"https://github.com/Ethan-Barr/Datanest/tree/main/Datanest/datasets/{model}"
-        if not os.path.exists(output_dir):
-            Datasets.download_dataset_raw(url, output_dir)
+        url = f"https://raw.githubusercontent.com/Ethan-Barr/Datanest/main/Datanest/datasets/{model}"
+        if not os.path.exists(model):
+            Datasets.download_dataset_raw(url, model)
         else:
             return f"Local file '{model}' allready exists."
 
@@ -78,3 +83,9 @@ class Datasets:
                 data.append(line)
     
         return data
+    
+# Testing 
+print('.')
+
+datasets = Datasets('download')
+datasets.download_dataset('TonyStark.txt')
