@@ -1,3 +1,4 @@
+import requests
 import os
 
 
@@ -6,7 +7,7 @@ class Datasets:
         self.path = path
 
 
-
+    ## Datasets
     def possible_models(self):
         path = self.path
 
@@ -14,6 +15,29 @@ class Datasets:
             for file in files:
                 file_path = os.path.join(root, file)
                 print(file_path)
+
+    ### Saving Datasets from DataNest
+    def download_dataset_raw(url, save_path):
+        try:
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(save_path, 'wb') as file:
+                    file.write(response.content)
+                return "Downloaded dataset"
+            else:
+                return "Failed to download dataset"
+        except Exception as e:
+            return f"Error: {e}"
+
+    
+    def download_dataset(self, model):
+        output_dir = self.path
+        url = f"https://github.com/Ethan-Barr/Datanest/tree/main/Datanest/datasets/{model}"
+        if not os.path.exists(output_dir):
+            Datasets.download_dataset_raw(url, output_dir)
+        else:
+            return f"Local file '{model}' allready exists."
+
 
     ## Transcripts
     def load_whole_transcript(self, model):
@@ -25,11 +49,7 @@ class Datasets:
                     target_file_path = os.path.join(path, model)
                     with open(target_file_path, 'r') as file:
                         file_contents = file.read()
-
-
                     return file_contents
-            
-            
             else:
                 return "File not found in the specified folder."
 
