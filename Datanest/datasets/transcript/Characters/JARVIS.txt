@@ -1,0 +1,35 @@
+JARVIS: Good morning. It's 7:00 a.m. The weather in Malibu is 72 degrees with scattered clouds. The surf conditions are fair with waist-to-shoulder high lines. High tide will be at 10:52 a.m.
+JARVIS: You are not authorized to access this area.
+JARVIS: The compression in cylinder three appears to be low.
+JARVIS: For you, sir, always.
+JARVIS: Shall I store this on the Stark Industries Central Database?
+JARVIS: Working on a secret project, are we, sir?
+JARVIS: At your service, sir.
+JARVIS: Check.
+JARVIS: Will do, sir.
+JARVIS: I have indeed been uploaded, sir. We're online and ready.
+JARVIS: Importing preferences and calibrating virtual environment.
+JARVIS: As you wish. [The full suit is shown.] Test complete. Preparing to power down and begin diagnostics.
+JARVIS: Sir, there are still terabytes of calculations needed before an actual flight is...
+JARVIS: The altitude record for fixed wing flight is 85,000 feet, sir.
+JARVIS: Sir, there is a potentially fatal buildup of ice occurring.
+JARVIS: A very astute observation, sir. Perhaps, if you intend to visit other planets, we should improve the exosystems.
+JARVIS: Yes. Shall I render using proposed specifications?
+JARVIS: I have no record of an invitation, sir.
+JARVIS: The render is complete.
+JARVIS: What was I thinking? You're usually so discreet.
+JARVIS: Yes, that should help you keep a low profile. The render is complete.
+JARVIS: Commencing automated assembly. Estimated completion time is five hours.
+JARVIS: Inbound missile.
+JARVIS: You've been reengaged. Execute evasive maneuver.
+JARVIS: It is a tight fit, sir. Sir, the more you struggle, the more this is going to hurt.
+JARVIS: Please, try not to move, sir.
+JARVIS: The suit's at 48% power and falling, sir. That chest piece was never designed for sustained flight.
+JARVIS: Sir, it appears that his suit can fly.
+JARVIS: With only 15% power, the odds of reaching that--
+JARVIS: Thirteen percent power, sir.
+JARVIS: Eleven percent.
+JARVIS: Seven percent power.
+JARVIS: Two percent. We are now running on emergency backup power.
+JARVIS: Repulsors offline. Missiles offline.
+JARVIS: [distorted] Welcome home, Sir. [Jarvis cuts out]
