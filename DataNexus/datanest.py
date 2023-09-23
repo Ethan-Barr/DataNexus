@@ -37,7 +37,7 @@ class Datasets:
 
     
     def download_dataset(self, model):
-        url = f"https://raw.githubusercontent.com/Ethan-Barr/Datanest/main/Datanest/datasets/{model}"
+        url = f"https://raw.githubusercontent.com/Ethan-Barr/DataNexus/main/Datanest/datasets/{model}"
         if not os.path.exists(model):
             Datasets.download_dataset_raw(url, model)
         else:

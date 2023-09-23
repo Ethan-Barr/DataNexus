@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='DataNexus',
+    name='datanexus',
     version='0.0.1',
     description='A dataset module for your projects',
     long_description=open("README.md").read(),
