@@ -22,26 +22,36 @@ pip install datanexus
 
 ### Downloading of Datasets/Transcripts
 ```py
-from datanexus import download_dataset_raw, download_dataset
+from datanexus import datanexus
 
-datanexus = datanexus('Models/') # Insert your directory that you would like to use
+datanexus = datanexus()
 
-model = datanexus.download_dataset(model='ironman') # Choose a model
-print(model)
+datasets = datanexus.download_dataset('ironman.txt')
+print(datasets)
 ```
 
+
 ### Extract character's from transcripts
+You will need to create a folder called `Models` to sucessfully extract the character information
 ```py
-from datanexus import save_character
+from datanexus import datanexus
 
-datanexus = datanexus('Models/') # Insert your directory that you would like to use
-
-character = datanexus.save_character(output_dir='Models', character='JARVIS:')
+character = datanexus.save_character('ironman.txt', 'Tony Stark:', 'Tony.txt')
 print(character)
+```
+## Showing all of the possible datasets
+This function will show all of the possible datasets that is usable
+```py
+from datanexus import datanexus
+
+datasets = datanexus.possible_models()
+
+for dataset in datasets:
+    print(dataset)
 ```
 
 
 ## Support
 If you have any question or any issues then feel free to create an issue on [Github](https://github.com/Ethan-Barr/DataNexus). 
 
-Feel free to join [The Workshop](https://discord.gg/jbVcf5yPyE) discord server and send me a ping (`_Ethan_`)
+Feel free to join [The Workshop](https://discord.gg/sm2ZdxvU6y) discord server and send me a ping (`_Ethan_`)
