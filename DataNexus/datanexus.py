@@ -2,7 +2,7 @@ import requests
 import os
 
 
-class Datasets: 
+class datanexus: 
     def __init__(self, path):
         self.path = path
 
@@ -39,7 +39,7 @@ class Datasets:
     def download_dataset(self, model):
         url = f"https://raw.githubusercontent.com/Ethan-Barr/DataNexus/main/Datanest/datasets/{model}"
         if not os.path.exists(model):
-            Datasets.download_dataset_raw(url, model)
+            datanexus.download_dataset_raw(url, model)
         else:
             return f"Local file '{model}' allready exists."
 

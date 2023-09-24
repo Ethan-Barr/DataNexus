@@ -6,8 +6,8 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="datanexus",
-    version="0.0.2",
-    description="Description of your module",
+    version="0.0.3",
+    description="A dataset module for your projects",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Ethan Barr",
