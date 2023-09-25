@@ -4,7 +4,7 @@ import os
 
 class datanexus:
     # Datasets
-    def possible_models():
+    def models():
         api_url = 'https://api.github.com/repos/Ethan-Barr/DataNexus/contents/DataNexus/datasets'
         try:
             response = requests.get(api_url)
@@ -13,21 +13,23 @@ class datanexus:
                 data = response.json()
 
                 if isinstance(data, list):
-                    return [item['name'] for item in data]
+                    model_list = [item['name'] for item in data]
+                    for model in model_list:
+                        return model_list
                 else:
                     return []
 
             else:
-                print(f"Failed to retrieve content from {api_url}. Status code: {response.status_code}")
+                print(
+                    f"Failed to retrieve content from {api_url}. Status code: {response.status_code}")
                 return []
 
         except Exception as e:
             print(f"An error occurred: {e}")
             return []
 
-
-
     # Saving Datasets from DataNexus
+
     @staticmethod
     def download_dataset_raw(url, save_path):
         try:
@@ -49,9 +51,8 @@ class datanexus:
         else:
             return f"Local file '{model}' allready exists."
 
-
-
     # Transcripts
+
     def load_whole_transcript(model):
         url = f"https://raw.githubusercontent.com/Ethan-Barr/DataNexus/main/DataNexus/datasets/{model}"
 
@@ -60,15 +61,15 @@ class datanexus:
 
             if response.status_code == 200:
                 return response.text
-        
+
             else:
                 return "Failed to retrieve data"
-        
+
         except Exception as e:
             return f"Error: {e}"
 
-
     # Character's
+
     def save_character(model, character, output_file):
         lines = []
 
